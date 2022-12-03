@@ -16,6 +16,11 @@ See [Vite Configuration Reference](https://vitejs.dev/config/).
 npm install
 ```
 
+## Make sure to init the firebase emulator so we dont have to use the external one 
+```sh
+firebase emulator:start
+```
+
 ### Compile and Hot-Reload for Development
 
 ```sh
