@@ -37,8 +37,12 @@
 <script setup>
 
 import { ref, onMounted } from 'vue';
-import { collection, onSnapshot, addDoc, deleteDoc, doc, updateDoc } from "firebase/firestore";
+import { collection, onSnapshot, addDoc, deleteDoc, doc, updateDoc, getFirestore, connectFirestoreEmulator } from "firebase/firestore";
 import { db } from '@/firebase'
+
+
+const db2 = getFirestore();
+connectFirestoreEmulator(db2, 'localhost', 8080);
 
 const todosCollectionRef = collection(db, 'todo')
 
