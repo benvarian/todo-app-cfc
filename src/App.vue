@@ -32,17 +32,41 @@
 
     </div>
   </div>
+  <div>
+    <form>
+      <label
+        class="form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none">email:</label>
+      <input type="email" v-model="email">
+      <label
+        class="form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none">password:</label>
+      <input type="password" v-model="password">
+      <button class="button text-white bg-blue-700 rounded-lg text-sm px-5 py-2.5 mr-2 mb-2"
+        @click="login()">login</button>
+    </form>
+  </div>
 </template>
 
 <script setup>
 
 import { ref, onMounted } from 'vue';
-import { collection, onSnapshot, addDoc, deleteDoc, doc, updateDoc, getFirestore, connectFirestoreEmulator } from "firebase/firestore";
-import { db } from '@/firebase'
+import { collection, onSnapshot, addDoc, deleteDoc, doc, updateDoc, connectFirestoreEmulator } from "firebase/firestore";
+import { db, auth, signInWithEmailAndPassword } from '@/firebase'
 
 
-const db2 = getFirestore();
-connectFirestoreEmulator(db2, 'localhost', 8080);
+
+if (window.location.hostname === 'localhost') {
+  connectFirestoreEmulator(db, 'localhost', 8080);
+  console.log('we going to emulate baby')
+}
+
+const email = ref('')
+const password = ref('')
+const login = () => {
+  signInWithEmailAndPassword(auth, email, password).then((userCredential) => {
+    console.log('signed in' + userCredential)
+  })
+}
+
 
 const todosCollectionRef = collection(db, 'todo')
 
