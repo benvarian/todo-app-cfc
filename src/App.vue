@@ -2,7 +2,7 @@
   <div>
     <h2 class="text-4xl font-bold heading-formatting">Bens Todo-app with Firebase functionality & tailwind</h2>
   </div>
-  <div class="todo-formatting">
+  <!-- <div class="todo-formatting">
     <form @submit.prevent="addTodo">
       <div class="grid grid-cols-2">
         <input v-model="todoContent" type="text" id="todo"
@@ -31,17 +31,29 @@
       </div>
 
     </div>
-  </div>
+  </div> -->
   <div>
-    <form>
+    <form @submit.prevent>
       <label
         class="form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none">email:</label>
       <input type="email" v-model="email">
       <label
         class="form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none">password:</label>
       <input type="password" v-model="password">
+      <br>
+      <label for="cars">Choose a car:</label>
+      <select v-model="selected">
+        <option v-for="option in options" :value="option.role">{{ option.role }}
+        </option>
+      </select>
+      <p>selected {{ selected }}</p>
+      <br>
       <button class="button text-white bg-blue-700 rounded-lg text-sm px-5 py-2.5 mr-2 mb-2"
         @click="login()">login</button>
+      <button class="button text-white bg-blue-700 rounded-lg text-sm px-5 py-2.5 mr-2 mb-2"
+        @click="register()">register</button>
+      <button class="button text-white bg-blue-700 rounded-lg text-sm px-5 py-2.5 mr-2 mb-2" @click="signout()">log
+        out</button>
     </form>
   </div>
 </template>
@@ -49,24 +61,85 @@
 <script setup>
 
 import { ref, onMounted } from 'vue';
-import { collection, onSnapshot, addDoc, deleteDoc, doc, updateDoc, connectFirestoreEmulator } from "firebase/firestore";
-import { db, auth, signInWithEmailAndPassword } from '@/firebase'
+import { collection, onSnapshot, addDoc, deleteDoc, doc, updateDoc, connectFirestoreEmulator, setDoc } from "firebase/firestore";
+import { db, app } from '@/firebase'
+import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword, connectAuthEmulator, signOut } from "firebase/auth"
 
+const options = ref([{ id: "1", role: "admin" }, { id: "2", role: "head adjudicator" }, { id: "3", role: "adjudicator" }])
+// console.log(options)
+
+let selected = ref('')
+
+
+// console.log(app)
+const auth = getAuth(app);
 
 
 if (window.location.hostname === 'localhost') {
   connectFirestoreEmulator(db, 'localhost', 8080);
+  connectAuthEmulator(auth, "http://localhost:9099");
   console.log('we going to emulate baby')
 }
 
-const email = ref('')
-const password = ref('')
-const login = () => {
-  signInWithEmailAndPassword(auth, email, password).then((userCredential) => {
-    console.log('signed in' + userCredential)
-  })
+const email = ref('ben@ben.com')
+const password = ref('123456')
+const login = async () => {
+  // console.log(email.value + '  ' + password.value)
+  signInWithEmailAndPassword(auth, email.value, password.value)
+    .then((userCredential) => {
+      // Signed in 
+      const user = userCredential.user;
+      console.log(user)
+      // ...
+    })
+    .catch((error) => {
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      console.log(errorCode + errorMessage)
+    });
+
+
+}
+//   addDoc(todosCollectionRef, {
+//     email: email.value,
+//     password: password.value,
+//     done: false,
+
+//   }).then(
+//     console.log(todosCollectionRef.id)
+//   ).catch(error => {
+//     console.log(error)
+//   })
+//   // ...
+// })
+
+
+const register = async () => {
+  await createUserWithEmailAndPassword(auth, email.value, password.value)
+    .then((userCredential) => {
+      // Signed in 
+      const user = userCredential.user;
+      // console.log(user.uid)
+      const usersRef = doc(db, 'users', user.uid)
+      console.log(usersRef)
+      const data = { role: selected.value }
+      console.log(setDoc(usersRef, data).then(() => {
+        console.log("done")
+      }).catch(error => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        console.log(errorCode + errorMessage)
+      }));
+    })
 }
 
+
+
+
+const signout = async () => {
+  await signOut(auth);
+  console.log(auth)
+}
 
 const todosCollectionRef = collection(db, 'todo')
 
@@ -74,42 +147,42 @@ const todosCollectionRef = collection(db, 'todo')
 const todos = ref([])
 
 // get todos
-onMounted(() => {
-  // this will simply update the view once when a new todo is added 
-  // const querySnapshot = await getDocs(collection(db, "todo"));
-  // let nTodos = []
-  // querySnapshot.forEach((doc) => {
-  //   const todo = {
-  //     id: doc.id,
-  //     content: doc.data().content,
-  //     done: doc.data().done
-  //   }
-  //   nTodos.push(todo)
-  // });
-  // todos.value = nTodos
+// onMounted(() => {
+//   // this will simply update the view once when a new todo is added 
+//   // const querySnapshot = await getDocs(collection(db, "todo"));
+//   // let nTodos = []
+//   // querySnapshot.forEach((doc) => {
+//   //   const todo = {
+//   //     id: doc.id,
+//   //     content: doc.data().content,
+//   //     done: doc.data().done
+//   //   }
+//   //   nTodos.push(todo)
+//   // });
+//   // todos.value = nTodos
 
-  // will update the view every single time a new todo is added in the database will be good for wadl maybe 
-  onSnapshot(todosCollectionRef, (querySnapshot) => {
-    const fbTodos = [];
-    querySnapshot.forEach((doc) => {
-      const todo = {
-        id: doc.id,
-        content: doc.data().content,
-        done: doc.data().done
-      }
-      fbTodos.push(todo)
-    })
-    todos.value = fbTodos
-  })
-})
+//   // will update the view every single time a new todo is added in the database will be good for wadl maybe 
+//   onSnapshot(todosCollectionRef, (querySnapshot) => {
+//     const fbTodos = [];
+//     querySnapshot.forEach((doc) => {
+//       const todo = {
+//         id: doc.id,
+//         content: doc.data().content,
+//         done: doc.data().done
+//       }
+//       fbTodos.push(todo)
+//     })
+//     todos.value = fbTodos
+//   })
+// })
 
 const todoContent = ref('')
 
 const addTodo = () => {
-  addDoc(todosCollectionRef, {
+  console.log(addDoc(todosCollectionRef, {
     content: todoContent.value,
     done: false
-  })
+  }))
   todoContent.value = ''
 }
 
