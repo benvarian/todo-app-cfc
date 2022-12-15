@@ -1,4 +1,4 @@
-<template>
+<template >
   <div>
     <h2 class="text-4xl font-bold heading-formatting">Bens Todo-app with Firebase functionality & tailwind</h2>
   </div>
@@ -54,6 +54,8 @@
         @click="register()">register</button>
       <button class="button text-white bg-blue-700 rounded-lg text-sm px-5 py-2.5 mr-2 mb-2" @click="signout()">log
         out</button>
+      <button class="button text-white bg-blue-700 rounded-lg text-sm px-5 py-2.5 mr-2 mb-2"
+        @click="dump()">dump</button>
     </form>
   </div>
 </template>
@@ -64,6 +66,12 @@ import { ref, onMounted } from 'vue';
 import { collection, onSnapshot, addDoc, deleteDoc, doc, updateDoc, connectFirestoreEmulator, setDoc } from "firebase/firestore";
 import { db, app } from '@/firebase'
 import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword, connectAuthEmulator, signOut } from "firebase/auth"
+import data from "../data.json"
+
+const result = JSON.stringify(data)
+const x = JSON.parse(result)
+// console.log(x['ID'])
+
 
 const options = ref([{ id: "1", role: "admin" }, { id: "2", role: "head adjudicator" }, { id: "3", role: "adjudicator" }])
 // console.log(options)
@@ -80,6 +88,30 @@ if (window.location.hostname === 'localhost') {
   connectAuthEmulator(auth, "http://localhost:9099");
   console.log('we going to emulate baby')
 }
+
+const dump = () => {
+  x.forEach(element => {
+    // console.log(element.EMAIL + element.PASSWORD)
+    createUserWithEmailAndPassword(auth, element.EMAIL, element.PASSWORD)
+      .then((userCredential) => {
+        // Signed in 
+        const user = userCredential.user;
+        // console.log(user.uid)
+        const usersRef = doc(db, 'users', user.uid)
+        // console.log(usersRef)
+        const data = { role: element.ROLE, first_name: element.FIRST_NAME, surname: element.SURNAME, email: element.EMAIL, phone: element.PHONE_NUMBER }
+        // console.log(data)
+        setDoc(usersRef, data).then(() => {
+          console.log("done");
+        }).catch(error => {
+          const errorCode = error.code;
+          const errorMessage = error.message;
+          console.log(errorCode + errorMessage);
+        });
+      })
+  });
+}
+
 
 const email = ref('ben@ben.com')
 const password = ref('123456')
