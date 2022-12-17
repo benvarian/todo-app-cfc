@@ -101,14 +101,17 @@ const dump = () => {
         // console.log(usersRef)
         const data = { role: element.ROLE, first_name: element.FIRST_NAME, surname: element.SURNAME, email: element.EMAIL, phone: element.PHONE_NUMBER }
         // console.log(data)
-        setDoc(usersRef, data).then(() => {
-          console.log("done");
-        }).catch(error => {
-          const errorCode = error.code;
-          const errorMessage = error.message;
-          console.log(errorCode + errorMessage);
-        });
+        setTimeout(() => {
+          setDoc(usersRef, data).then(() => {
+            console.log("done");
+          }).catch(error => {
+            const errorCode = error.code;
+            const errorMessage = error.message;
+            // console.log(errorCode + errorMessage);
+          });
+        }, 300);
       })
+      
   });
 }
 
