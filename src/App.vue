@@ -65,8 +65,15 @@
 import { ref, onMounted } from 'vue';
 import { collection, onSnapshot, addDoc, deleteDoc, doc, updateDoc, connectFirestoreEmulator, setDoc } from "firebase/firestore";
 import { db, app } from '@/firebase'
-import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword, connectAuthEmulator, signOut } from "firebase/auth"
+import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword, connectAuthEmulator, signOut, AuthErrorCodes } from "firebase/auth"
 import data from "../data.json"
+import torni from "../tournaments.json"
+import institutions from "../institutions.json"
+
+const tor = JSON.stringify(torni)
+const y = JSON.parse(tor)
+// console.log(y)
+
 
 const result = JSON.stringify(data)
 const x = JSON.parse(result)
@@ -89,6 +96,37 @@ if (window.location.hostname === 'localhost') {
   console.log('we going to emulate baby')
 }
 
+
+const insti = JSON.stringify(institutions)
+const file = JSON.parse(insti)
+
+file.forEach((element) => {
+  console.log(file);
+  const adjids = []
+  const teams = []
+
+  const ref = doc(db, 'institutions', element.id)
+  console.log(ref)
+
+  element['adjudicator_ids'].forEach(ele => {
+
+    adjids.push(ele)
+  })
+  element['team_ids'].forEach(elem => {
+    teams.push(elem)
+  }
+    // const data = {
+    //   id: element.id,
+    //   coordId: element.coordinator_id,
+    //   adjId: adjids,
+    //   teams: teams,
+    //   name: element.name,
+    //   abbreviation: element.abbreviation,
+    //   code: element.code
+    // }
+  )
+})
+
 const dump = () => {
   x.forEach(element => {
     // console.log(element.EMAIL + element.PASSWORD)
@@ -96,7 +134,7 @@ const dump = () => {
       .then((userCredential) => {
         // Signed in 
         const user = userCredential.user;
-        // console.log(user.uid)
+        // console.log(AuthErrorCodes.)
         const usersRef = doc(db, 'users', user.uid)
         // console.log(usersRef)
         const data = { role: element.ROLE, first_name: element.FIRST_NAME, surname: element.SURNAME, email: element.EMAIL, phone: element.PHONE_NUMBER }
@@ -111,7 +149,6 @@ const dump = () => {
           });
         }, 300);
       })
-      
   });
 }
 
@@ -237,6 +274,20 @@ const toggleDone = id => {
   })
 
 }
+
+
+
+
+
+// y.forEach(element => {
+//   // console.log(element.institution_ids[0].id);
+//   console.log(element.levels[2].level);
+//   // element.level.forEach(element => {
+//   //   console.log(element.levels.level);
+
+//   // });
+// })
+
 
 </script>
 

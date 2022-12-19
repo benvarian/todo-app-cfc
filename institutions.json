@@ -1,0 +1,416 @@
+[
+  {
+    "id": 1,
+    "coordinator_id": "ace1710a-eb5d-480c-aab5-aaa286cb4c19",
+    "adjudicator_ids": [
+      { "id": "4e2deaed-251b-4790-9203-8aac859035f4" },
+      { "id": "2ee3d9c3-83a8-44df-aa37-de5de9b95fab" }
+    ],
+    "team_ids": [
+      { "id": "5005294f-60fa-445d-b0b2-af80513757c9" },
+      { "id": "3d88ec9f-9f6f-424d-9d8d-c3669e9f8859" },
+      { "id": "c551bffe-8da1-4095-aaeb-08efafa02660" },
+      { "id": "a09cd6fc-2572-4fde-88db-bb4a50a170fe" },
+      { "id": "5a0202ac-36e9-4e7c-8328-d26fd1eccc2b" }
+    ],
+    "name": "Walter, Lueilwitz and Haag",
+    "abbreviation": "AYPB",
+    "code": "OC"
+  },
+  {
+    "id": 2,
+    "coordinator_id": "f75df24a-853f-433c-bf7e-562a08386958",
+    "adjudicator_ids": [
+      { "id": "d45e43a3-9f25-4ce9-aed4-84b8ef0c4d03" },
+      { "id": "511f9677-718c-42f3-8060-2828817d5304" },
+      { "id": "482e92af-7ade-4894-aa1f-856167f27b73" }
+    ],
+    "team_ids": [
+      { "id": "1b28fa2a-a319-4931-9b23-dca2ab78c848" },
+      { "id": "66988447-f6cc-4b8b-a822-71378a2b33a6" },
+      { "id": "2cbf44a1-a270-4d3a-accb-3ca867503ca0" },
+      { "id": "84d737d8-b0f4-4a07-8c36-9d1abfcac592" },
+      { "id": "683ebfd6-ace5-43ab-8411-a161da34f637" },
+      { "id": "c20c5645-a676-4616-b4bb-746d09e27a58" },
+      { "id": "3e58b4f5-7ee9-4491-af3a-0b36f5a948fa" },
+      { "id": "a7a8ee98-56d8-4059-b108-f5f9c2459bac" },
+      { "id": "e3dda8cc-f2ab-4d4e-bff9-7eb963f6833a" },
+      { "id": "5cf543ee-b3e5-4ffc-920a-5a1317993127" },
+      { "id": "c5ad3f64-54f4-4c09-9715-bdc8d60619f9" },
+      { "id": "a3da73ad-ae7f-4405-bd71-bb483ad24098" },
+      { "id": "06f37b61-57a2-4b9e-8794-622969eb2e80" },
+      { "id": "8989aa8d-138d-482c-bc66-08bf58a58434" },
+      { "id": "3da7b005-a558-4d52-a6aa-b1a53ce3c504" },
+      { "id": "1b589e6e-63f8-4cce-a882-f65519c00039" }
+    ],
+    "name": "Huel Group",
+    "abbreviation": "ZYHB",
+    "code": "AS"
+  },
+  {
+    "id": 3,
+    "coordinator_id": "2328f505-41ba-47e4-8e09-068c41a47047",
+    "adjudicator_ids": [
+      { "id": "7421f140-9f36-401a-bb33-e011e54ca64d" },
+      { "id": "59a54c10-a898-4419-8b4a-9c99d8d5e9d8" }
+    ],
+    "team_ids": [
+      { "id": "e515efda-dc9a-4b4c-b648-b3488007b374" },
+      { "id": "c16f2d4f-0822-44d2-9280-5f9adbe8b489" },
+      { "id": "d2fea645-bf01-4bd5-9313-d9c21b58c8cb" },
+      { "id": "175402af-b057-48cb-a89c-94a1046eebac" },
+      { "id": "41a25619-ab63-498e-93e8-c311a9f8e0d7" },
+      { "id": "76439789-99f3-49d1-b5d5-f89ce6d7fc9c" },
+      { "id": "7bbd715c-40dc-42c7-9a70-9917d69a744b" },
+      { "id": "76006f45-858e-4f3c-ae33-6d8530dd4f17" },
+      { "id": "2a44665e-efd0-4222-81a4-b538c54b1d06" }
+    ],
+    "name": "Littel-Carter",
+    "abbreviation": "BINF",
+    "code": "EU"
+  },
+  {
+    "id": 4,
+    "coordinator_id": "4a1364fd-e3e9-46da-bdc6-7b422d1e300a",
+    "adjudicator_ids": [
+      { "id": "b101814d-8817-4d72-8d70-5c2f025c1989" },
+      { "id": "93fabc8d-f160-4029-aa7f-2194c94b39c7" }
+    ],
+    "team_ids": [
+      { "id": "31927c1f-b3e6-42ab-b784-47ba1f27edbb" },
+      { "id": "e86a4bb1-0a92-41ae-84e3-84c72badc05f" },
+      { "id": "33f7401a-f2d8-49b0-9f24-5d55ab933325" },
+      { "id": "56e54c87-0a24-4a2f-96ca-e1c1dd6fdc3a" },
+      { "id": "9d1cf51c-b686-4c82-b444-f74cc79c8ab3" },
+      { "id": "7acb3cba-f8a6-41b8-8efd-dfb4537fda62" },
+      { "id": "f6c6f259-9c49-4803-b630-b141cbaf9122" },
+      { "id": "9f496927-ea02-4afb-99e6-c1f94b414a28" },
+      { "id": "acca5442-a8e6-4a24-bc77-0e0116f5f772" }
+    ],
+    "name": "Hermiston, Hoeger and Orn",
+    "abbreviation": "AYBO",
+    "code": "OC"
+  },
+  {
+    "id": 5,
+    "coordinator_id": "d8ccb322-890d-48bf-bba1-0e183319afd0",
+    "adjudicator_ids": [
+      { "id": "7e6a3e51-d251-4ca6-8aa5-728f0321b81c" },
+      { "id": "b6880cfe-1cc0-416b-a9ff-acd5df36dc1b" }
+    ],
+    "team_ids": [
+      { "id": "368e2bd4-7f30-4f50-9b49-81e6c943a153" },
+      { "id": "5e6d0b7c-22cc-4a31-ba34-d2fcd1036693" },
+      { "id": "61b2c52b-530a-4f8f-9824-177d972ffd12" },
+      { "id": "0408e676-7f69-454e-b1a2-f6bcac6042e9" },
+      { "id": "5513e27c-fa49-4ab2-bbdc-e32d88f7fa64" },
+      { "id": "48c523ab-5c71-414d-a62d-1b3b789ac948" },
+      { "id": "542bcde6-00c0-4257-942f-f705cbc858fa" },
+      { "id": "e61ffe90-c434-42ed-a5a4-02631433f126" },
+      { "id": "be2500e8-594c-48d6-91b0-70b4f565dc2f" },
+      { "id": "9dced41f-79a8-4bf0-b926-df5da8748e49" },
+      { "id": "e60ed2a0-7d0a-4d2d-a57e-0a38c258eb0d" },
+      { "id": "8ea59f94-45c1-45d7-9756-5c773c916da1" },
+      { "id": "4f5f3c51-dfd3-4146-9293-e4ee21285cce" }
+    ],
+    "name": "Leannon-Berge",
+    "abbreviation": "LFRJ",
+    "code": "EU"
+  },
+  {
+    "id": 6,
+    "coordinator_id": "0d88dc70-1753-49da-9d24-c14e406fc9cc",
+    "adjudicator_ids": [
+      { "id": "36cb87dc-2a1d-426b-a66a-3edb604234d7" },
+      { "id": "359f9cf4-2dcf-44e4-9c06-ebf21bc96cbf" },
+      { "id": "2cd96308-27d9-488a-a064-483a86ce76c9" }
+    ],
+    "team_ids": [
+      { "id": "c0abb91b-aaf6-4d5b-a906-57e3dd730a64" },
+      { "id": "625ec7c0-2f54-4a1b-b936-5ad58dc28a11" },
+      { "id": "404a5870-d441-4732-94b8-71fa6aa2ce16" },
+      { "id": "149c56cd-7304-455c-871d-ddee42094a6b" },
+      { "id": "12c4687d-dee5-42e0-a07e-822d7c8fb431" },
+      { "id": "221200ae-b2b3-4547-8f7d-aeffdec69238" },
+      { "id": "a5f3cae8-a705-4b32-ac98-bb88a81b3f93" },
+      { "id": "f637a39f-6bc8-4739-9085-34b29241e61d" },
+      { "id": "41bd15b2-bb3f-44fc-9324-fb31192d4944" },
+      { "id": "f5fc2be2-9811-4df4-bf00-e628ee874993" },
+      { "id": "14fe0ae5-54e3-438f-844e-82481bfaf563" },
+      { "id": "7b3fd33f-a27c-4e3e-a5b6-177e8914564a" },
+      { "id": "8811f930-07cb-40d0-a406-a5c610fb57f4" },
+      { "id": "00310a7e-7829-47d5-af5e-46047ff53a38" }
+    ],
+    "name": "Bayer Inc",
+    "abbreviation": "OIAG",
+    "code": "AS"
+  },
+  {
+    "id": 7,
+    "coordinator_id": "d28a1cd7-75d1-4c56-80d2-8de13961d713",
+    "adjudicator_ids": [{ "id": "47d1327e-d61d-4587-8d8c-87c638e6fbbb" }],
+    "team_ids": [
+      { "id": "ee2cbdd7-e2c7-475c-824c-d93030455ba9" },
+      { "id": "2dd64249-3333-4c71-af0b-c13769c400bc" },
+      { "id": "fef2b485-0feb-4bbe-b1c1-b4729ec512f4" },
+      { "id": "ad10e9ab-d215-4f56-bd15-2fad177180ca" },
+      { "id": "fe008f45-8b65-46a8-8c36-7a77a7bbf733" },
+      { "id": "d8c03026-b81c-43a6-a818-01857c69bb53" },
+      { "id": "388d1e03-7e31-4723-bff8-78b27c109f8d" }
+    ],
+    "name": "Lesch-Botsford",
+    "abbreviation": "HETB",
+    "code": "AS"
+  },
+  {
+    "id": 8,
+    "coordinator_id": "1a59e940-29dd-4935-a050-a973301bd749",
+    "adjudicator_ids": [{ "id": "55916076-d2de-4c73-968e-99f7511b2e95" }],
+    "team_ids": [
+      { "id": "a5bae370-743d-43b4-bbe6-c6134cb11142" },
+      { "id": "34a5cd6c-03b0-48f7-81a1-429543f285ef" },
+      { "id": "4f55fbc7-0aa3-4ced-a580-16a8e536b05a" },
+      { "id": "b6c1afc8-86ca-492f-920e-6c518f29fe46" },
+      { "id": "fb41203e-b3e1-494e-84bf-8fee2c55d2b5" }
+    ],
+    "name": "Grady, Green and Connelly",
+    "abbreviation": "FAHL",
+    "code": "AF"
+  },
+  {
+    "id": 9,
+    "coordinator_id": "7cfb4111-d618-47bd-9c97-ca0e45df7e7c",
+    "adjudicator_ids": [
+      { "id": "6131ef79-bd84-4cd2-a8a0-c5e21cf86708" },
+      { "id": "1baa986f-b33f-4309-9dbb-783298b6a3f9" },
+      { "id": "74e4f6bb-2d3a-4637-99a0-2f6b0939fd09" }
+    ],
+    "team_ids": [
+      { "id": "53425c76-3603-414e-b39a-56bd1f311b1e" },
+      { "id": "1e0cc850-1298-42f5-8671-47a5eeba97f8" },
+      { "id": "7d5996aa-ece8-4223-99d7-97cfc2e71ddc" },
+      { "id": "1f6ed463-b4bb-43f4-aac0-7b6c874baefe" },
+      { "id": "cc9cc7d2-1984-46ee-86b5-235c1ac7e03a" },
+      { "id": "5db0fc12-27f3-4283-b750-e0c11400129d" }
+    ],
+    "name": "Ankunding and Sons",
+    "abbreviation": "PANN",
+    "code": "NA"
+  },
+  {
+    "id": 10,
+    "coordinator_id": "ebac522b-3374-46f2-9829-69268b70a23e",
+    "adjudicator_ids": [
+      { "id": "60e025d4-df0f-43f3-a056-09d3b05fb55a" },
+      { "id": "ed40a23b-c599-4018-8d2c-c8d31f6e097b" }
+    ],
+    "team_ids": [
+      { "id": "8be40c59-1e6c-42a8-b3c3-fc5f2de27f4f" },
+      { "id": "d87366d3-0b21-4bbb-9cc8-37bc311915d6" },
+      { "id": "f1b1c3cd-9763-4acb-bed9-863fa11f54e0" },
+      { "id": "f7be1728-03c3-49b7-a11d-4889508d79a5" },
+      { "id": "e439a319-d944-4ca3-acc0-8faf6d151e95" }
+    ],
+    "name": "MacGyver, Lebsack and Wiza",
+    "abbreviation": "GQNH",
+    "code": "AF"
+  },
+  {
+    "id": 11,
+    "coordinator_id": "6e19c790-c753-4eae-9ab1-4d55a22149ba",
+    "adjudicator_ids": [{ "id": "c521bd32-af94-4e9a-a35e-6b907a1a2c79" }],
+    "team_ids": [
+      { "id": "dc925154-db0d-4574-b4a5-91d3369aa403" },
+      { "id": "e8ad2fbe-f7c4-417d-a70f-cdefd07ccda1" },
+      { "id": "6631b761-97fa-48eb-9ac7-14a11613e5be" },
+      { "id": "f9c7f449-1f5c-4a58-9ee7-4cb37b9a6982" }
+    ],
+    "name": "Jacobs, Nikolaus and Rolfson",
+    "abbreviation": "ENML",
+    "code": "EU"
+  },
+  {
+    "id": 12,
+    "coordinator_id": "358ae17f-4b3d-43c4-9ac2-a93902a34303",
+    "adjudicator_ids": [
+      { "id": "fe54d165-9f3b-455b-88d5-8298e95de9be" },
+      { "id": "0b031cd1-0dc2-4b3b-a99c-93440d17cee6" },
+      { "id": "b4b04c4a-17c4-4a5b-ab0f-2516b460ada9" }
+    ],
+    "team_ids": [
+      { "id": "76f33dcb-ce96-46ec-bfe6-98093e6dc41a" },
+      { "id": "fe4c1a20-5b4d-4ae4-8854-9785b7e0911c" },
+      { "id": "dcffbef1-6a9a-4a50-a214-319757bc6786" },
+      { "id": "5c244c25-d703-4fd2-bcae-b63aeebbe8a8" }
+    ],
+    "name": "Lowe-Herman",
+    "abbreviation": "KUCA",
+    "code": "NA"
+  },
+  {
+    "id": 13,
+    "coordinator_id": "26e7a717-3770-4d77-bfc8-8022f78887df",
+    "adjudicator_ids": [
+      { "id": "4c80d601-c5fc-4bb1-b8f9-709fcb5c85df" },
+      { "id": "40193635-1acf-43db-84a3-528207e13492" }
+    ],
+    "team_ids": [
+      { "id": "ff397b48-5b06-4529-90b5-977ab223f51c" },
+      { "id": "21b7e0f5-679d-40cc-9e37-f192e5715a92" },
+      { "id": "3ab9dd65-df9f-4e88-8ed3-f373d0bdb476" },
+      { "id": "5b88102d-be83-4dc4-90db-33dd6b25496c" },
+      { "id": "eeaf964f-10ee-4e75-ac9c-05f74106dff6" }
+    ],
+    "name": "Bernier, Mitchell and Wisozk",
+    "abbreviation": "AYNS",
+    "code": "OC"
+  },
+  {
+    "id": 14,
+    "coordinator_id": "ff1ca8ca-ed9a-49fc-8131-e7edcaba3c36",
+    "adjudicator_ids": [
+      { "id": "d86e1c4f-cb7e-4d4d-8bea-630a33a7bdc9" },
+      { "id": "12e4c7b8-782b-4ed3-b39d-a45580cf148a" },
+      { "id": "643c99f6-1bf8-49c5-b56f-a69d053da868" }
+    ],
+    "team_ids": [
+      { "id": "7be52fe1-3b9f-4321-ac86-3c1fd3b73b7f" },
+      { "id": "dcf0069d-364c-4c3c-9bd1-5cb272ee16d0" },
+      { "id": "de20b3af-b257-40f1-8b8e-27d528595968" },
+      { "id": "b0022274-e64c-4c8a-b5bc-2cda73fa5620" },
+      { "id": "f8979ca3-95bb-48ea-932e-d3613e0f4410" },
+      { "id": "03bba304-6570-4508-bf52-5409f1ff497e" }
+    ],
+    "name": "Jacobi Inc",
+    "abbreviation": "KJHW",
+    "code": "NA"
+  },
+  {
+    "id": 15,
+    "coordinator_id": "fa52bc52-5618-44c9-a94a-ed264333e8da",
+    "adjudicator_ids": [
+      { "id": "c41f68af-856b-4008-83ae-85b038b3ab9b" },
+      { "id": "f47d1ca7-f840-4e78-9ec1-1e165320d0d4" }
+    ],
+    "team_ids": [
+      { "id": "d16371c7-fac8-47e3-8f4c-ee20d9edfde3" },
+      { "id": "5b3efe7c-6d3e-4481-821b-e6df0b1d99a2" },
+      { "id": "456f37bd-b47a-4b83-8577-8e14d236d6b2" },
+      { "id": "dbed4ba2-1ac6-4bcb-ba04-302d69f0d602" }
+    ],
+    "name": "Wunsch-Adams",
+    "abbreviation": "AYKW",
+    "code": "OC"
+  },
+  {
+    "id": 16,
+    "coordinator_id": "7bed8a13-a808-4820-ac9a-592e7076e267",
+    "adjudicator_ids": [
+      { "id": "504ae857-a312-4d5b-a37e-a69bffdc2339" },
+      { "id": "e718c386-eeef-4721-9dc7-eee475e68d8d" }
+    ],
+    "team_ids": [
+      { "id": "bfb71a5e-67ed-46c3-85f0-c09c0d717981" },
+      { "id": "f83ede5d-8444-4616-b1af-dc91cf58a257" },
+      { "id": "eaeb8ed5-1d98-4c77-a703-baab5fa5ce62" },
+      { "id": "0d7cbd57-5f08-4036-b78e-6da069625756" },
+      { "id": "ac984156-68b2-40ce-939e-5948433bd3ca" },
+      { "id": "edab1152-e246-4757-8592-a52ee9ad688a" },
+      { "id": "b8275b20-569a-4898-aaad-b2803867106c" },
+      { "id": "d1eab7d0-14d1-449b-82fc-26af7cc499a4" },
+      { "id": "fe600658-0bdf-496f-8a69-0df497ea4094" },
+      { "id": "3629ccfa-d79d-48ea-b504-d6935c8258f7" },
+      { "id": "b0e33e2e-84a5-470d-b454-27b92a200f1d" },
+      { "id": "24b12dc5-c0d6-4bc4-8408-ae0cc1314ac3" },
+      { "id": "154aad60-638a-416a-b431-392d9f68764b" },
+      { "id": "3ed38afe-bbd1-4163-957d-cf030efbb293" },
+      { "id": "a6d49208-8f9e-46ac-83a4-1568bd52f58c" }
+    ],
+    "name": "Runolfsdottir LLC",
+    "abbreviation": "KSAD",
+    "code": "NA"
+  },
+  {
+    "id": 17,
+    "coordinator_id": "721d8665-1d10-4031-9e3c-06aaaa00d918",
+    "adjudicator_ids": [
+      { "id": "cd0cc127-d508-4122-b733-e0515cd4156e" },
+      { "id": "1dc386d2-0a64-4a35-99af-d90768da02ad" },
+      { "id": "d5a5841c-c9cf-48a1-b120-ecb2be52bfb1" }
+    ],
+    "team_ids": [
+      { "id": "0f8446c3-d0c1-4b7e-bcad-438a6357b1f3" },
+      { "id": "190b3646-f3e8-439d-8004-c3f6c78dd16c" },
+      { "id": "d28ecf1c-52aa-4ec6-943a-ac5502b9f07d" },
+      { "id": "3a358421-06b8-468a-ad24-44ed72338175" },
+      { "id": "b037c7c1-c8da-48df-8d28-ff348c25ad0b" },
+      { "id": "717c0308-d0b9-4728-8772-052163bb682b" }
+    ],
+    "name": "Christiansen-Donnelly",
+    "abbreviation": "KMMS",
+    "code": "NA"
+  },
+  {
+    "id": 18,
+    "coordinator_id": "63598d4c-0135-4901-897a-0b2e6dc168be",
+    "adjudicator_ids": [{ "id": "56ff5d88-471a-4a9c-a3b7-030cd30008ab" }],
+    "team_ids": [
+      { "id": "a840b3dd-133e-4d6d-a7dc-3b9325a8aa90" },
+      { "id": "1b499155-8c8c-497a-8cb8-a2efaa3749bd" },
+      { "id": "ed279b6a-27c2-4754-a39d-84b2ab21c5f6" },
+      { "id": "2a73b6c2-c039-4c5d-8461-39d0d9f523af" },
+      { "id": "0f839994-395a-447a-848d-9e81d4a51754" },
+      { "id": "3ca99e1a-1fde-402e-9e78-6b7fb2a6c988" },
+      { "id": "c3ee80e9-b87a-4d45-998e-29795bfda27e" },
+      { "id": "9246a99c-f856-49a0-b9a1-cee018086ea8" },
+      { "id": "396aab2d-c065-45f5-82ac-801e29b30034" },
+      { "id": "7f4f8825-cb7a-4774-8d70-b76f853de691" }
+    ],
+    "name": "Mayert, Hagenes and Becker",
+    "abbreviation": "KCNH",
+    "code": "NA"
+  },
+  {
+    "id": 19,
+    "coordinator_id": "dce4e990-513a-410c-aff2-291839ec6ce7",
+    "adjudicator_ids": [{ "id": "f829c8bc-cb68-48ab-9f4f-7c0e8f3599df" }],
+    "team_ids": [
+      { "id": "48e0273e-c56a-424e-9d7b-87e1b2997dc4" },
+      { "id": "392379b1-aa5f-4446-bfe2-01857eafe705" },
+      { "id": "61f10e8e-e51d-46fa-87b6-2e0588342028" },
+      { "id": "03738c4e-8a7e-4711-901b-8761eccc9fc2" },
+      { "id": "e7038d58-b26a-4695-81f8-b34718a630d3" },
+      { "id": "6f17f599-46e5-4669-b3ab-b88936583521" },
+      { "id": "7e81f0b6-195a-4c37-931d-2afcb98b3065" },
+      { "id": "3095705c-d556-49b7-9df4-ff9a69971bce" },
+      { "id": "6bb42933-7980-4d4b-ba18-63a154fe6882" }
+    ],
+    "name": "Kunze-McLaughlin",
+    "abbreviation": "SBCN",
+    "code": "SA"
+  },
+  {
+    "id": 20,
+    "coordinator_id": "a48e92b4-a78b-49f0-9f77-8295b6ea2fe0",
+    "adjudicator_ids": [
+      { "id": "be7e77ac-cfd7-4128-9480-64fe70664cc7" },
+      { "id": "fa8ff66a-a88a-4f4c-a1be-eedce2a9ac64" },
+      { "id": "3da6f9e1-694d-4c4b-a74e-dc630fcebb6b" }
+    ],
+    "team_ids": [
+      { "id": "5fa4e2e8-3089-47a5-95e6-6b7d0c80c00f" },
+      { "id": "f755d16e-27a1-4dd5-80b4-af82f3573373" },
+      { "id": "eb960bdc-47b8-4379-bd19-0b02751f2a07" },
+      { "id": "2284452f-790d-4172-9251-09167668afad" },
+      { "id": "416ff164-62e3-4a4b-8ba3-5e8b577264da" },
+      { "id": "8bf58460-d442-416f-8a86-3edbe3ea2d65" },
+      { "id": "f66b7290-bc25-4378-9063-137963e7ad92" },
+      { "id": "c42ea9df-64f9-4e3b-9572-961caa7c5616" },
+      { "id": "7d54b771-9524-4ca6-a9a6-83ab990ca930" },
+      { "id": "95ae980c-cc3b-40be-ae87-ec89ebdaf54e" }
+    ],
+    "name": "Turner, Kling and Zulauf",
+    "abbreviation": "LYTV",
+    "code": "EU"
+  }
+]
