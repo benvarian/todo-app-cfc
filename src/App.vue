@@ -100,32 +100,40 @@ if (window.location.hostname === 'localhost') {
 const insti = JSON.stringify(institutions)
 const file = JSON.parse(insti)
 
-file.forEach((element) => {
-  console.log(file);
+file.forEach(element => {
+  // console.log(file);
   const adjids = []
   const teams = []
 
-  const ref = doc(db, 'institutions', element.id)
-  console.log(ref)
+  const reference = collection(db, 'institutions')
+  // console.log(element.id)
 
   element['adjudicator_ids'].forEach(ele => {
-
     adjids.push(ele)
   })
   element['team_ids'].forEach(elem => {
     teams.push(elem)
+  })
+  // const reference = doc(db, 'institutions', element.id)
+  // const usersRef = doc(db, 'users', "hello")
+
+  // console.log(reference);
+  const data = {
+    id: element.id,
+    coordId: element.coordinator_id,
+    adjId: adjids,
+    teams: teams,
+    name: element.name,
+    abbreviation: element.abbreviation,
+    code: element.code
   }
-    // const data = {
-    //   id: element.id,
-    //   coordId: element.coordinator_id,
-    //   adjId: adjids,
-    //   teams: teams,
-    //   name: element.name,
-    //   abbreviation: element.abbreviation,
-    //   code: element.code
-    // }
-  )
+  addDoc(reference, data).then(() => {
+    console.log('done');
+  }).catch((err) => {
+    console.log(err);
+  })
 })
+
 
 const dump = () => {
   x.forEach(element => {
@@ -147,7 +155,7 @@ const dump = () => {
             const errorMessage = error.message;
             // console.log(errorCode + errorMessage);
           });
-        }, 300);
+        }, 500);
       })
   });
 }
