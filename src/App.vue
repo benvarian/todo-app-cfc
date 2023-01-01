@@ -66,21 +66,31 @@ import { ref, onMounted } from 'vue';
 import { collection, onSnapshot, addDoc, deleteDoc, doc, updateDoc, connectFirestoreEmulator, setDoc } from "firebase/firestore";
 import { db, app } from '@/firebase'
 import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword, connectAuthEmulator, signOut, AuthErrorCodes } from "firebase/auth"
-import data from "../data.json"
-import torni from "../tournaments.json"
-import institutions from "../institutions.json"
+import newUsers from "../newData/mockturtle_users.json"
+import newInsti from "../newData/mockturtle_insti.json"
+import newTeams from "../newData/mockturtle_teams.json"
+import newVenues from "../newData/mockturtle_venues.json"
+import newTorna from "../newData/mockturtle_tornis.json"
 
-const tor = JSON.stringify(torni)
-const y = JSON.parse(tor)
+// console.log(newUsers);
+
 // console.log(y)
 
 
-const result = JSON.stringify(data)
-const x = JSON.parse(result)
-// console.log(x['ID'])
+const res = JSON.stringify(newUsers)
+const x = JSON.parse(res)
+const insti = JSON.stringify(newInsti)
+const y = JSON.parse(insti)
+const teams = JSON.stringify(newTeams)
+const z = JSON.parse(teams)
+const venues = JSON.stringify(newVenues)
+const c = JSON.parse(venues)
+const torna = JSON.stringify(newTorna)
+const v = JSON.parse(torna)
 
 
-const options = ref([{ id: "1", role: "admin" }, { id: "2", role: "head adjudicator" }, { id: "3", role: "adjudicator" }])
+
+const options = ref([{ id: "1", role: "Admin" }, { id: "2", role: "head adjudicator" }, { id: "3", role: "adjudicator" }])
 // console.log(options)
 
 let selected = ref('')
@@ -96,56 +106,94 @@ if (window.location.hostname === 'localhost') {
   console.log('we going to emulate baby')
 }
 
+// y.forEach(element => {
+//   // console.log(element.id);
+//   const ref = doc(db, "institutions", element.id);
+//   setDoc(ref, element)
+// });
 
-const insti = JSON.stringify(institutions)
-const file = JSON.parse(insti)
+// z.forEach(element => {
+//   // const ref = doc(db, "teams", element.id)
+//   // const ref = collection(db, "teams")
+//   const ref = doc(db, "teams", element.id)
+//   // addDoc(ref, element)
+//   setDoc(ref, element)
+// })
+// c.forEach(element => {
+//   const ref = doc(db, "venues", element.id)
+//   setDoc(ref, element)
+// })
+v.forEach(element => {
+  // let el = Object.keys(element).filter(x => x !== 'levels')
+  // console.log([el]);
+  // console.log(element);
+  // console.log(element.splice(1,0));
+  const ref = collection(db, "tournaments")
 
-file.forEach(element => {
-  // console.log(file);
-  const adjids = []
-  const teams = []
+  addDoc(ref, element)
 
-  const reference = collection(db, 'institutions')
-  // console.log(element.id)
-
-  element['adjudicator_ids'].forEach(ele => {
-    adjids.push(ele)
-  })
-  element['team_ids'].forEach(elem => {
-    teams.push(elem)
-  })
-  // const reference = doc(db, 'institutions', element.id)
-  // const usersRef = doc(db, 'users', "hello")
-
-  // console.log(reference);
-  const data = {
-    id: element.id,
-    coordId: element.coordinator_id,
-    adjId: adjids,
-    teams: teams,
-    name: element.name,
-    abbreviation: element.abbreviation,
-    code: element.code
-  }
-  addDoc(reference, data).then(() => {
-    console.log('done');
-  }).catch((err) => {
-    console.log(err);
-  })
 })
+
+
+
+// file.forEach(element => {
+//   // console.log(file);
+//   const adjids = []
+//   const teams = []
+
+//   const reference = collection(db, 'institutions')
+//   // console.log(element.id)
+
+//   element['adjudicator_ids'].forEach(ele => {
+//     adjids.push(ele)
+//   })
+//   element['team_ids'].forEach(elem => {
+//     teams.push(elem)
+//   })
+//   // const reference = doc(db, 'institutions', element.id)
+//   // const usersRef = doc(db, 'users', "hello")
+
+//   // console.log(reference);
+//   const data = {
+//     id: element.id,
+//     coordId: element.coordinator_id,
+//     adjId: adjids,
+//     teams: teams,
+//     name: element.name,
+//     abbreviation: element.abbreviation,
+//     code: element.code
+//   }
+//   addDoc(reference, data).then(() => {
+//     console.log('done');
+//   }).catch((err) => {
+//     console.log(err);
+//   })
+// })
+
+
+// const tournaments = JSON.stringify(mock)
+// const resTorni = JSON.parse(tournaments)
+// // console.log(resTorni);
+
+// resTorni.forEach(element => {
+//   // console.log(element);
+//   const ref = collection(db, "tournamets");
+//   // console.log(ref);
+//   addDoc(ref, element)
+// })
 
 
 const dump = () => {
   x.forEach(element => {
-    // console.log(element.EMAIL + element.PASSWORD)
-    createUserWithEmailAndPassword(auth, element.EMAIL, element.PASSWORD)
+    console.log(element)
+    createUserWithEmailAndPassword(auth, element.email, element.password)
       .then((userCredential) => {
         // Signed in 
         const user = userCredential.user;
         // console.log(AuthErrorCodes.)
         const usersRef = doc(db, 'users', user.uid)
         // console.log(usersRef)
-        const data = { role: element.ROLE, first_name: element.FIRST_NAME, surname: element.SURNAME, email: element.EMAIL, phone: element.PHONE_NUMBER }
+        const data = { role: element.role, first_name: element.first_name, surname: element.last_name, email: element.email, phone: element.phone_number, password: element.password, institutions: element.institutions, id: element.id }
         // console.log(data)
         setTimeout(() => {
           setDoc(usersRef, data).then(() => {
@@ -180,18 +228,7 @@ const login = async () => {
 
 
 }
-//   addDoc(todosCollectionRef, {
-//     email: email.value,
-//     password: password.value,
-//     done: false,
 
-//   }).then(
-//     console.log(todosCollectionRef.id)
-//   ).catch(error => {
-//     console.log(error)
-//   })
-//   // ...
-// })
 
 
 const register = async () => {
@@ -282,20 +319,6 @@ const toggleDone = id => {
   })
 
 }
-
-
-
-
-
-// y.forEach(element => {
-//   // console.log(element.institution_ids[0].id);
-//   console.log(element.levels[2].level);
-//   // element.level.forEach(element => {
-//   //   console.log(element.levels.level);
-
-//   // });
-// })
-
 
 </script>
 
