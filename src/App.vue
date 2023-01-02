@@ -106,23 +106,23 @@ if (window.location.hostname === 'localhost') {
   console.log('we going to emulate baby')
 }
 
-// y.forEach(element => {
-//   // console.log(element.id);
-//   const ref = doc(db, "institutions", element.id);
-//   setDoc(ref, element)
-// });
+y.forEach(element => {
+  // console.log(element.id);
+  const ref = doc(db, "institutions", element.id);
+  setDoc(ref, element)
+});
 
-// z.forEach(element => {
-//   // const ref = doc(db, "teams", element.id)
-//   // const ref = collection(db, "teams")
-//   const ref = doc(db, "teams", element.id)
-//   // addDoc(ref, element)
-//   setDoc(ref, element)
-// })
-// c.forEach(element => {
-//   const ref = doc(db, "venues", element.id)
-//   setDoc(ref, element)
-// })
+z.forEach(element => {
+  // const ref = doc(db, "teams", element.id)
+  // const ref = collection(db, "teams")
+  const ref = doc(db, "teams", element.id)
+  // addDoc(ref, element)
+  setDoc(ref, element)
+})
+c.forEach(element => {
+  const ref = doc(db, "venues", element.id)
+  setDoc(ref, element)
+})
 v.forEach(element => {
   // let el = Object.keys(element).filter(x => x !== 'levels')
   // console.log([el]);
