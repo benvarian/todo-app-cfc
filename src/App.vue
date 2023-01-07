@@ -72,15 +72,33 @@ export default {
 import { ref, onMounted } from 'vue';
 import { collection, onSnapshot, addDoc, deleteDoc, doc, updateDoc, connectFirestoreEmulator, setDoc } from "firebase/firestore";
 import { db, app } from '@/firebase'
-import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword, connectAuthEmulator, signOut } from "firebase/auth"
-import data from "../data.json"
+import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword, connectAuthEmulator, signOut, AuthErrorCodes } from "firebase/auth"
+import newUsers from "../newData/mockturtle_users.json"
+import newInsti from "../newData/mockturtle_insti.json"
+import newTeams from "../newData/mockturtle_teams.json"
+import newVenues from "../newData/mockturtle_venues.json"
+import newTorna from "../newData/mockturtle_tornis.json"
 
-const result = JSON.stringify(data)
-const x = JSON.parse(result)
-// console.log(x['ID'])
+// console.log(newUsers);
+
+// console.log(y)
 
 
-const options = ref([{ id: "1", role: "admin" }, { id: "2", role: "head adjudicator" }, { id: "3", role: "adjudicator" }])
+const res = JSON.stringify(newUsers)
+const x = JSON.parse(res)
+const insti = JSON.stringify(newInsti)
+const y = JSON.parse(insti)
+const teams = JSON.stringify(newTeams)
+const z = JSON.parse(teams)
+const venues = JSON.stringify(newVenues)
+const c = JSON.parse(venues)
+const torna = JSON.stringify(newTorna)
+const v = JSON.parse(torna)
+
+
+
+const options = ref([{ id: "1", role: "Admin" }, { id: "2", role: "head adjudicator" }, { id: "3", role: "adjudicator" }])
+// console.log(options)
 
 let auth = ref('')
 
@@ -95,31 +113,84 @@ if (window.location.hostname === 'localhost') {
   console.log('we going to emulate baby')
 }
 
-const dump = () => {
-  let i;
-  for (i in x) {
-    let element = x[i]
-    console.log(element.EMAIL + element.PASSWORD)
-    createUserWithEmailAndPassword(auth, element.EMAIL, element.PASSWORD)
-    .then((userCredential) => {
-      // Signed in 
-      let user = userCredential.user;
-      // console.log(user.uid)
-      let usersRef = collection(db, 'users')
-      // console.log(usersRef)
-      let data = { role: element.ROLE, first_name: element.FIRST_NAME, surname: element.SURNAME, email: element.EMAIL, phone: element.PHONE_NUMBER }
-      // console.log(data)
-      addDoc(usersRef, data).then(() => {
-        console.log("done");
-      }).catch(error => {
-        let errorCode = error.code;
-        let errorMessage = error.message;
-        // console.log(errorCode + errorMessage);
-      });
-    });
-  };
-}
+y.forEach(element => {
+  // console.log(element.id);
+  const ref = doc(db, "institutions", element.id);
+  setDoc(ref, element)
+});
 
+z.forEach(element => {
+  // const ref = doc(db, "teams", element.id)
+  // const ref = collection(db, "teams")
+  const ref = doc(db, "teams", element.id)
+  // addDoc(ref, element)
+  setDoc(ref, element)
+})
+c.forEach(element => {
+  const ref = doc(db, "venues", element.id)
+  setDoc(ref, element)
+})
+v.forEach(element => {
+  // let el = Object.keys(element).filter(x => x !== 'levels')
+  // console.log([el]);
+  // console.log(element);
+  // console.log(element.splice(1,0));
+  const ref = collection(db, "tournaments")
+
+  addDoc(ref, element)
+
+})
+
+
+
+// file.forEach(element => {
+//   // console.log(file);
+//   const adjids = []
+//   const teams = []
+
+//   const reference = collection(db, 'institutions')
+//   // console.log(element.id)
+
+//   element['adjudicator_ids'].forEach(ele => {
+//     adjids.push(ele)
+//   })
+//   element['team_ids'].forEach(elem => {
+//     teams.push(elem)
+//   })
+//   // const reference = doc(db, 'institutions', element.id)
+//   // const usersRef = doc(db, 'users', "hello")
+
+//   // console.log(reference);
+//   const data = {
+//     id: element.id,
+//     coordId: element.coordinator_id,
+//     adjId: adjids,
+//     teams: teams,
+//     name: element.name,
+//     abbreviation: element.abbreviation,
+//     code: element.code
+//   }
+//   addDoc(reference, data).then(() => {
+//     console.log('done');
+//   }).catch((err) => {
+//     console.log(err);
+//   })
+// })
+
+
+// const tournaments = JSON.stringify(mock)
+// const resTorni = JSON.parse(tournaments)
+// // console.log(resTorni);
+
+// resTorni.forEach(element => {
+//   // console.log(element);
+//   const ref = collection(db, "tournamets");
+//   // console.log(ref);
+//   addDoc(ref, element)
+// })
+
+
+const dump = () => {
 
 const email = ref('ben@ben.com')
 const password = ref('123456')
@@ -140,18 +211,6 @@ const login = async () => {
 
 
 }
-//   addDoc(todosCollectionRef, {
-//     email: email.value,
-//     password: password.value,
-//     done: false,
-
-//   }).then(
-//     console.log(todosCollectionRef.id)
-//   ).catch(error => {
-//     console.log(error)
-//   })
-//   // ...
-// })
 
 
 const register = async () => {
