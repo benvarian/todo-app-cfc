@@ -1,17 +1,5 @@
 <script>
 import InputForm from './InputForm.vue'
-import InputButton from './InputButton.vue'
-
-const headerFormat = "text-4xl flex h-24 font-bold heading-formatting text-center content"
-const pageFormat = "h-screen w-screen"
-const colours=[["h-screen w-screen bg-gradient-to-r from-purple-400  via-green-400 to-pink-400", "text-4xl flex h-24 font-bold heading-formatting text-center content bg-gradient-to-r from-purple-600  via-blue-500 to-pink-600"],["h-screen w-screen bg-gradient-to-r  from-red-400  via-green-400 to-blue-400", "text-4xl flex h-24 font-bold heading-formatting text-center content bg-gradient-to-r from-red-600  via-green-500 to-blue-600"],["h-screen w-screen bg-gradient-to-r from-pink-400  via-green-400 to-pink-400", "text-4xl flex h-24 font-bold heading-formatting text-center content bg-gradient-to-r from-pink-600  via-green-500 to-pink-600"],["h-screen w-screen bg-gradient-to-r from-blue-400  via-pink-400 to-red-200", "text-4xl flex h-24 font-bold heading-formatting text-center content bg-gradient-to-r from-blue-600  via-pink-500 to-red-300"]]
-let chosenColours = ["h-screen w-screen bg-gradient-to-r from-purple-400  via-green-400 to-pink-400", "text-4xl flex h-24 font-bold heading-formatting text-center content bg-gradient-to-r from-purple-600  via-blue-500 to-pink-600"]
-const randomizeColour = () => {
-  let rndom = Math.floor(Math.random() * 4)
-  chosenColours = colours[rndom]
-}
-
-randomizeColour();
 
 export default {
   components: {
@@ -22,11 +10,11 @@ export default {
 </script>
 
 <template >
-<div :class="chosenColours[0]">
-  <div :class="chosenColours[1]">
+<div class="h-screen w-screen">
+  <div class="text-4xl flex h-24 font-bold heading-formatting bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-center content">
     <h2 class="flex items-center justify-center w-full h-full">Bens Todo-app with Firebase functionality & tailwind</h2>
   </div>
-  <div class="flex flex-col justify-center h-2/3 space-evenly "> 
+  <div class="flex flex-col justify-center bg-gradient-to-r from-green-400 to-blue-500 h-full space-evenly "> 
   <!-- <div class="todo-formatting">
     <form @submit.prevent="addTodo">
       <div class="grid grid-cols-2">
@@ -57,33 +45,26 @@ export default {
 
     </div>
   </div> -->
-    <form @submit.prevent class="w-full flex flex-col justify-center">
-      <InputForm type="Email" autoFill="ben@ben.com" v-model="email" />
-      <InputForm type="Password" v-model="password" />
+  <form @submit.prevent class="w-full flex flex-col justify-center">
+    <InputForm type="Email" autoFill="ben@ben.com" v-model="email" />
+    <InputForm type="Password" v-model="password" />
 
-      <select class="w-1/3 m-auto shadow-md rounded block mb-4" v-model="role" >
-        <option :value="this.role" hidden disabled>Please Select Role</option>
+      <select class="w-1/3 m-auto shadow-md rounded block" v-model="auth">
         <option v-for="option in options" :key="option.id" :value="option.role"> {{ option.role }}
         </option>
       </select>
-      
-      <InputButton :clickFunction="login" content="login" />
-      <InputButton :clickFunction="register" content="register" />
-      <InputButton :clickFunction="signout" content="log out" />
-      <InputButton :clickFunction="dump" content="dump" />
 
-      <div class="w-1/3 m-auto">
-        <form class="">
-          <div class="w-full h-full shadow-md rounded bg-blue-600 hover:bg-gradient-to-r from-purple-700  via-indigo-300 to-pink-500 button text-sm px-5 py-2.5 mr-2 mb-2 flex justify-center ">
-          <button class="text-transparent bg-clip-text text-md bg-gradient-to-br from-red-500 via-green-500 to-blue-100 font-bold "
-              @click="randomizeColour">Randomize Colours!</button>
-          </div>
-        </form>
-      </div>
-
-    </form>
-  </div>
-</div>
+      <button class="w-1/3 m-auto shadow-md rounded block hover:bg-blue-600 button text-white bg-blue-700 rounded-lg text-sm px-5 py-2.5 mr-2 mb-2"
+        @click="login()">login</button>
+      <button class="w-1/3 m-auto shadow-md rounded block hover:bg-blue-600 button text-white bg-blue-700 rounded-lg text-sm px-5 py-2.5 mr-2 mb-2"
+        @click="register()">register</button>
+      <button class="w-1/3 m-auto shadow-md rounded block hover:bg-blue-600 button text-white bg-blue-700 rounded-lg text-sm px-5 py-2.5 mr-2 mb-2" @click="signout()">log
+        out</button>
+      <button class="w-1/3 m-auto shadow-md rounded block hover:bg-blue-600 button text-white bg-blue-700 rounded-lg text-sm px-5 py-2.5 mr-2 mb-2"
+        @click="dump()">dump</button>
+  </form>
+   </div>
+   </div>
 </template>
 
 <script setup>
@@ -210,6 +191,7 @@ v.forEach(element => {
 
 
 const dump = () => {
+
 const email = ref('ben@ben.com')
 const password = ref('123456')
 const login = async () => {
@@ -228,7 +210,7 @@ const login = async () => {
     });
 
 
-}}
+}
 
 
 const register = async () => {
