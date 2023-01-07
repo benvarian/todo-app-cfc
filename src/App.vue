@@ -1,20 +1,7 @@
-<script>
-import InputForm from './InputForm.vue'
-
-export default {
-  components: {
-    InputForm,
-    InputButton
-  }
-}
-</script>
-
 <template >
-<div class="h-screen w-screen">
-  <div class="text-4xl flex h-24 font-bold heading-formatting bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-center content">
-    <h2 class="flex items-center justify-center w-full h-full">Bens Todo-app with Firebase functionality & tailwind</h2>
+  <div>
+    <h2 class="text-4xl font-bold heading-formatting">Bens Todo-app with Firebase functionality & tailwind</h2>
   </div>
-  <div class="flex flex-col justify-center bg-gradient-to-r from-green-400 to-blue-500 h-full space-evenly "> 
   <!-- <div class="todo-formatting">
     <form @submit.prevent="addTodo">
       <div class="grid grid-cols-2">
@@ -38,33 +25,39 @@ export default {
           </div>
           <div>
             <button type="button" @click="toggleDone(todo.id)"
-              class=" inline-block px-6 py-2.5 bg-green-600 text-white font-medium  justify-center flex flex-coltext-xs leading-tight uppercase rounded shadow-md  hover:shadow-lg  focus:shadow-lg focus:outline-none focus:ring-0  active:shadow-lg transition duration-150 ease-in-out">Done</button>
+              class=" inline-block px-6 py-2.5 bg-green-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md  hover:shadow-lg  focus:shadow-lg focus:outline-none focus:ring-0  active:shadow-lg transition duration-150 ease-in-out">Done</button>
           </div>
         </div>
       </div>
 
     </div>
   </div> -->
-  <form @submit.prevent class="w-full flex flex-col justify-center">
-    <InputForm type="Email" autoFill="ben@ben.com" v-model="email" />
-    <InputForm type="Password" v-model="password" />
-
-      <select class="w-1/3 m-auto shadow-md rounded block" v-model="auth">
-        <option v-for="option in options" :key="option.id" :value="option.role"> {{ option.role }}
+  <div>
+    <form @submit.prevent>
+      <label
+        class="form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none">email:</label>
+      <input type="email" v-model="email">
+      <label
+        class="form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none">password:</label>
+      <input type="password" v-model="password">
+      <br>
+      <label for="cars">Choose a car:</label>
+      <select v-model="selected">
+        <option v-for="option in options" :value="option.role">{{ option.role }}
         </option>
       </select>
-
-      <button class="w-1/3 m-auto shadow-md rounded block hover:bg-blue-600 button text-white bg-blue-700 rounded-lg text-sm px-5 py-2.5 mr-2 mb-2"
+      <p>selected {{ selected }}</p>
+      <br>
+      <button class="button text-white bg-blue-700 rounded-lg text-sm px-5 py-2.5 mr-2 mb-2"
         @click="login()">login</button>
-      <button class="w-1/3 m-auto shadow-md rounded block hover:bg-blue-600 button text-white bg-blue-700 rounded-lg text-sm px-5 py-2.5 mr-2 mb-2"
+      <button class="button text-white bg-blue-700 rounded-lg text-sm px-5 py-2.5 mr-2 mb-2"
         @click="register()">register</button>
-      <button class="w-1/3 m-auto shadow-md rounded block hover:bg-blue-600 button text-white bg-blue-700 rounded-lg text-sm px-5 py-2.5 mr-2 mb-2" @click="signout()">log
+      <button class="button text-white bg-blue-700 rounded-lg text-sm px-5 py-2.5 mr-2 mb-2" @click="signout()">log
         out</button>
-      <button class="w-1/3 m-auto shadow-md rounded block hover:bg-blue-600 button text-white bg-blue-700 rounded-lg text-sm px-5 py-2.5 mr-2 mb-2"
+      <button class="button text-white bg-blue-700 rounded-lg text-sm px-5 py-2.5 mr-2 mb-2"
         @click="dump()">dump</button>
-  </form>
-   </div>
-   </div>
+    </form>
+  </div>
 </template>
 
 <script setup>
@@ -100,11 +93,11 @@ const v = JSON.parse(torna)
 const options = ref([{ id: "1", role: "Admin" }, { id: "2", role: "head adjudicator" }, { id: "3", role: "adjudicator" }])
 // console.log(options)
 
-let auth = ref('')
+let selected = ref('')
 
 
 // console.log(app)
-auth = getAuth(app);
+const auth = getAuth(app);
 
 
 if (window.location.hostname === 'localhost') {
@@ -191,6 +184,30 @@ v.forEach(element => {
 
 
 const dump = () => {
+  x.forEach(element => {
+    console.log(element)
+    createUserWithEmailAndPassword(auth, element.email, element.password)
+      .then((userCredential) => {
+        // Signed in 
+        const user = userCredential.user;
+        // console.log(AuthErrorCodes.)
+        const usersRef = doc(db, 'users', user.uid)
+        // console.log(usersRef)
+        const data = { role: element.role, first_name: element.first_name, surname: element.last_name, email: element.email, phone: element.phone_number, password: element.password, institutions: element.institutions, id: element.id, requesting: element.requesting }
+        // console.log(data)
+        setTimeout(() => {
+          setDoc(usersRef, data).then(() => {
+            console.log("done");
+          }).catch(error => {
+            const errorCode = error.code;
+            const errorMessage = error.message;
+            // console.log(errorCode + errorMessage);
+          });
+        }, 500);
+      })
+  });
+}
+
 
 const email = ref('ben@ben.com')
 const password = ref('123456')
@@ -213,6 +230,7 @@ const login = async () => {
 }
 
 
+
 const register = async () => {
   await createUserWithEmailAndPassword(auth, email.value, password.value)
     .then((userCredential) => {
@@ -221,7 +239,7 @@ const register = async () => {
       // console.log(user.uid)
       const usersRef = doc(db, 'users', user.uid)
       console.log(usersRef)
-      const data = { role: auth.value }
+      const data = { role: selected.value }
       console.log(setDoc(usersRef, data).then(() => {
         console.log("done")
       }).catch(error => {
@@ -313,5 +331,6 @@ const toggleDone = id => {
 
 .heading-formatting {
   text-align: center;
+  padding-top: 50px;
 }
 </style>
