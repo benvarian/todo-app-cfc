@@ -340,10 +340,10 @@
   {
     "role": "Adjudicator",
     "requesting": false,
-    "first_name": "Adjudicator",
-    "last_name": "Adjudicator",
+    "first_name": "adjudicator",
+    "last_name": "adjudicator",
     "password": "123456",
-    "email": "Adjudicator@Adjudicator.com",
+    "email": "adjudicator@adjudicator.com",
     "phone_number": "0000000000",
     "institutions": {
       "institution_ids": "4f3d9792-d64f-4db2-9795-f4d2f47b0fcd"
@@ -353,10 +353,10 @@
   {
     "role": "Team Coordinator",
     "requesting": false,
-    "first_name": "Team Coordinator",
-    "last_name": "Team Coordinator",
+    "first_name": "team coordinator",
+    "last_name": "team coordinator",
     "password": "123456",
-    "email": "Team Coordinator@Adjudicator.com",
+    "email": "tc@tc.com",
     "phone_number": "0000000000",
     "institutions": {
       "institution_ids": "4f3d9792-d64f-4db2-9795-f4d2f47b0fcd"
@@ -366,10 +366,10 @@
   {
     "role": "Adjudicator Coordinator",
     "requesting": false,
-    "first_name": "Adjudicator Coordinator",
-    "last_name": "Adjudicator Coordinator",
+    "first_name": "adjudicator coordinator",
+    "last_name": "adjudicator coordinator",
     "password": "123456",
-    "email": "Adjudicator Coordinator@Adjudicator.com",
+    "email": "ac@ac.com",
     "phone_number": "0000000000",
     "institutions": {
       "institution_ids": "4f3d9792-d64f-4db2-9795-f4d2f47b0fcd"
