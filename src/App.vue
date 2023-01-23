@@ -193,7 +193,7 @@ const dump = () => {
         // console.log(AuthErrorCodes.)
         const usersRef = doc(db, 'users', user.uid)
         // console.log(usersRef)
-        const data = { role: element.role, first_name: element.first_name, surname: element.last_name, email: element.email, phone: element.phone_number, password: element.password, institutions: element.institutions, id: element.id, requesting: element.requesting }
+        const data = { role: element.role, first_name: element.first_name, surname: element.last_name, email: element.email, phone: element.phone_number, password: element.password, institution: element.institution, id: element.id, requesting: element.requesting }
         // console.log(data)
         setTimeout(() => {
           setDoc(usersRef, data).then(() => {
