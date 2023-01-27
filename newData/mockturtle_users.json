@@ -5,7 +5,7 @@
     "firstName": "Clark",
     "lastName": "Hand",
     "email": "Clark21@yahoo.com",
-    "phone": "2670911386",
+    "phoneNumber": "2670911386",
     "institution": "fab6fc5f-53a1-470b-acb8-64a66ecb9caf"
   },
   {
@@ -14,7 +14,7 @@
     "firstName": "Meghan",
     "lastName": "Hermiston",
     "email": "Meghan_Hermiston11@gmail.com",
-    "phone": "4846369540",
+    "phoneNumber": "4846369540",
     "institution": "d2bc0756-a5e0-46b0-9bde-c354c2113ddb"
   },
   {
@@ -23,7 +23,7 @@
     "firstName": "Ernesto",
     "lastName": "Windler",
     "email": "Ernesto86@yahoo.com",
-    "phone": "2032238943",
+    "phoneNumber": "2032238943",
     "institution": "b2fa6770-24d4-4ae0-8bf1-f7e37c992f0a"
   },
   {
@@ -32,7 +32,7 @@
     "firstName": "Lorraine",
     "lastName": "Bins",
     "email": "Lorraine.Bins@gmail.com",
-    "phone": "3729652487",
+    "phoneNumber": "3729652487",
     "institution": "4c0a1312-d0f4-4fc4-890e-bf9c38cc1b73"
   },
   {
@@ -41,7 +41,7 @@
     "firstName": "Hilda",
     "lastName": "Will",
     "email": "Hilda6@gmail.com",
-    "phone": "8790977517",
+    "phoneNumber": "8790977517",
     "institution": "ab2882d0-b29c-4ca6-9073-4fe8093e5087"
   },
   {
@@ -50,7 +50,7 @@
     "firstName": "Terrell",
     "lastName": "White",
     "email": "Terrell_White6@hotmail.com",
-    "phone": "6668678994",
+    "phoneNumber": "6668678994",
     "institution": "c58c662b-454e-4fae-badc-a8ba8756df50"
   },
   {
@@ -59,7 +59,7 @@
     "firstName": "Salvatore",
     "lastName": "Hackett",
     "email": "Salvatore66@gmail.com",
-    "phone": "8108863987",
+    "phoneNumber": "8108863987",
     "institution": "d08ffe02-bc32-48e7-ba96-7c3d9890083e"
   },
   {
@@ -68,7 +68,7 @@
     "firstName": "Ora",
     "lastName": "Kuphal",
     "email": "Ora_Kuphal@hotmail.com",
-    "phone": "1314169721",
+    "phoneNumber": "1314169721",
     "institution": "35b12390-fc74-4534-baff-ffb9ba0739ee"
   },
   {
@@ -77,7 +77,7 @@
     "firstName": "Valerie",
     "lastName": "Abbott",
     "email": "Valerie12@gmail.com",
-    "phone": "8179028215",
+    "phoneNumber": "8179028215",
     "institution": "ae1f1f98-7bed-43e2-9940-a499030ed5a1"
   },
   {
@@ -86,7 +86,7 @@
     "firstName": "Jamie",
     "lastName": "Rath",
     "email": "Jamie.Rath14@gmail.com",
-    "phone": "6557710697",
+    "phoneNumber": "6557710697",
     "institution": "80756d86-dfb1-4939-b51a-7f47588f55fe"
   },
   {
@@ -95,7 +95,7 @@
     "firstName": "Ricardo",
     "lastName": "Reilly",
     "email": "Ricardo.Reilly52@gmail.com",
-    "phone": "1736010169",
+    "phoneNumber": "1736010169",
     "institution": "8fba9706-eb11-4855-8b66-9c62ea344b33"
   },
   {
@@ -104,7 +104,7 @@
     "firstName": "Eugene",
     "lastName": "Lockman",
     "email": "Eugene6@gmail.com",
-    "phone": "8912494802",
+    "phoneNumber": "8912494802",
     "institution": "790f38c0-6e58-41da-bca9-26978797eca7"
   },
   {
@@ -113,7 +113,7 @@
     "firstName": "Velma",
     "lastName": "Rohan",
     "email": "Velma_Rohan@hotmail.com",
-    "phone": "3491136376",
+    "phoneNumber": "3491136376",
     "institution": "0e283a75-a80e-40d2-9b81-33102bac0fca"
   },
   {
@@ -122,7 +122,7 @@
     "firstName": "Alexander",
     "lastName": "Greenholt",
     "email": "Alexander.Greenholt70@hotmail.com",
-    "phone": "8545156106",
+    "phoneNumber": "8545156106",
     "institution": "63a14ea6-40fd-49ba-b028-3fb721aac1f9"
   },
   {
@@ -131,7 +131,7 @@
     "firstName": "Nichole",
     "lastName": "Morar",
     "email": "Nichole17@yahoo.com",
-    "phone": "5205695939",
+    "phoneNumber": "5205695939",
     "institution": "22f23475-8fcc-4dbd-9497-373d6ff4724e"
   },
   {
@@ -140,7 +140,7 @@
     "firstName": "Nicholas",
     "lastName": "Denesik",
     "email": "Nicholas30@yahoo.com",
-    "phone": "1429372131",
+    "phoneNumber": "1429372131",
     "institution": "9b0ef490-6be6-4a0c-9f24-1f140041456f"
   },
   {
@@ -149,7 +149,7 @@
     "firstName": "Dexter",
     "lastName": "Sporer",
     "email": "Dexter_Sporer97@hotmail.com",
-    "phone": "0580070737",
+    "phoneNumber": "0580070737",
     "institution": "38ac5265-daff-447b-b270-3da84905fc04"
   },
   {
@@ -158,7 +158,7 @@
     "firstName": "Nancy",
     "lastName": "Shanahan",
     "email": "Nancy_Shanahan@yahoo.com",
-    "phone": "3340849846",
+    "phoneNumber": "3340849846",
     "institution": "0ca568e8-cdd9-4d90-b0bb-7aa0a917aa5c"
   },
   {
@@ -167,7 +167,7 @@
     "firstName": "Ann",
     "lastName": "Fritsch",
     "email": "Ann50@gmail.com",
-    "phone": "6999575279",
+    "phoneNumber": "6999575279",
     "institution": "33ee8025-dfed-4324-9de5-4422dfb60a5f"
   },
   {
@@ -176,7 +176,7 @@
     "firstName": "Tamara",
     "lastName": "Beahan",
     "email": "Tamara53@yahoo.com",
-    "phone": "0429115151",
+    "phoneNumber": "0429115151",
     "institution": "f0fc933b-061d-4151-a5e5-b0a91622bd2b"
   },
   {
@@ -185,7 +185,7 @@
     "firstName": "Leonard",
     "lastName": "Feeney",
     "email": "Leonard19@gmail.com",
-    "phone": "3534326407",
+    "phoneNumber": "3534326407",
     "institution": "13cdc757-804a-452e-b0d7-d6f8229f9547"
   },
   {
@@ -194,7 +194,7 @@
     "firstName": "Ivan",
     "lastName": "Pfannerstill",
     "email": "Ivan77@yahoo.com",
-    "phone": "8958143609",
+    "phoneNumber": "8958143609",
     "institution": "caf534f8-069d-45fd-ac63-870391d6b762"
   },
   {
@@ -203,7 +203,7 @@
     "firstName": "Yvette",
     "lastName": "Greenholt",
     "email": "Yvette76@hotmail.com",
-    "phone": "2749082395",
+    "phoneNumber": "2749082395",
     "institution": "bfd78a52-ca03-432b-a9de-09d86cef5cc8"
   },
   {
@@ -212,7 +212,7 @@
     "firstName": "Doyle",
     "lastName": "Christiansen",
     "email": "Doyle54@gmail.com",
-    "phone": "4178998824",
+    "phoneNumber": "4178998824",
     "institution": "2f5e26c2-d7ec-4752-be52-61fea5420fdf"
   },
   {
@@ -221,7 +221,7 @@
     "firstName": "Brenda",
     "lastName": "Hackett",
     "email": "Brenda.Hackett1@yahoo.com",
-    "phone": "8600580290",
+    "phoneNumber": "8600580290",
     "institution": "4f3d9792-d64f-4db2-9795-f4d2f47b0fcb"
   },
   {
@@ -230,7 +230,7 @@
     "firstName": "admin",
     "lastName": "admin",
     "email": "admin@admin.com",
-    "phone": "0000000000",
+    "phoneNumber": "0000000000",
     "institution": "4f3d9792-d64f-4db2-9795-f4d2f47b0fcd"
   },
   {
@@ -239,7 +239,7 @@
     "firstName": "adjudicator",
     "lastName": "adjudicator",
     "email": "adjudicator@adjudicator.com",
-    "phone": "0000000000",
+    "phoneNumber": "0000000000",
     "institution": "4f3d9792-d64f-4db2-9795-f4d2f47b0fcd"
   },
   {
@@ -248,8 +248,8 @@
     "firstName": "team coordinator",
     "lastName": "team coordinator",
     "email": "tc@tc.com",
-    "phone": "0000000000",
-    "institution": "4f3d9792-d64f-4db2-9795-f4d2f47b0fcd"
+    "phoneNumber": "0000000000",
+    "institution": ""
   },
   {
     "role": "Adjudicator Coordinator",
@@ -257,7 +257,7 @@
     "firstName": "adjudicator coordinator",
     "lastName": "adjudicator coordinator",
     "email": "ac@ac.com",
-    "phone": "0000000000",
+    "phoneNumber": "0000000000",
     "institution": "4f3d9792-d64f-4db2-9795-f4d2f47b0fcd"
   }
 ]
