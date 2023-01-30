@@ -1,7 +1,7 @@
 [
     {
         "name": "4422 Hagenes Stravenue",
-        "abbreviation": "XBA",
+        "capacity": 14,
         "roomNo": 12,
         "days": [
             "Friday",
@@ -14,7 +14,7 @@
     },
     {
         "name": "692 Legros Stream",
-        "abbreviation": "EUR",
+        "capacity": 1,
         "roomNo": 10,
         "days": [
             "Wednesday",
@@ -26,7 +26,7 @@
     },
     {
         "name": "83643 Gusikowski Haven",
-        "abbreviation": "DKK",
+        "capacity": 2,
         "roomNo": 5,
         "days": [
             "Thursday",
@@ -35,7 +35,7 @@
     },
     {
         "name": "8416 Nicolas Port",
-        "abbreviation": "BHD",
+        "capacity": 3,
         "roomNo": 20,
         "days": [
             "Tuesday"
@@ -43,7 +43,7 @@
     },
     {
         "name": "73168 Ernser Crossroad",
-        "abbreviation": "PGK",
+        "capacity": 4,
         "roomNo": 3,
         "days": [
             "Friday",
@@ -53,7 +53,7 @@
     },
     {
         "name": "88133 Aufderhar Corner",
-        "abbreviation": "XPF",
+        "capacity": 5,
         "roomNo": 28,
         "days": [
             "Thursday",
@@ -63,7 +63,7 @@
     },
     {
         "name": "16127 Cecile Springs",
-        "abbreviation": "RWF",
+        "capacity": 6,
         "roomNo": 16,
         "days": [
             "Thursday",
@@ -76,7 +76,7 @@
     },
     {
         "name": "53160 Schinner Terrace",
-        "abbreviation": "XAF",
+        "capacity": 7,
         "roomNo": 29,
         "days": [
             "Thursday"
@@ -84,7 +84,7 @@
     },
     {
         "name": "52785 Anderson Street",
-        "abbreviation": "BWP",
+        "capacity": 8,
         "roomNo": 24,
         "days": [
             "Saturday"
@@ -92,7 +92,7 @@
     },
     {
         "name": "6601 Kailee Ranch",
-        "abbreviation": "XCD",
+        "capacity": 9,
         "roomNo": 12,
         "days": [
             "Monday"
@@ -100,13 +100,13 @@
     },
     {
         "name": "509 Cummerata Islands",
-        "abbreviation": "EUR",
+        "capacity": 10,
         "roomNo": 19,
         "days": []
     },
     {
         "name": "115 Amir Route",
-        "abbreviation": "XOF",
+        "capacity": 11,
         "roomNo": 12,
         "days": [
             "Sunday"
@@ -114,7 +114,7 @@
     },
     {
         "name": "4465 McLaughlin Knoll",
-        "abbreviation": "XOF",
+        "capacity": 12,
         "roomNo": 20,
         "days": [
             "Monday",
@@ -125,7 +125,7 @@
     },
     {
         "name": "0281 Martine Passage",
-        "abbreviation": "CAD",
+        "capacity": 13,
         "roomNo": 30,
         "days": [
             "Thursday",
@@ -138,7 +138,7 @@
     },
     {
         "name": "965 Juston Branch",
-        "abbreviation": "BGN",
+        "capacity": 14,
         "roomNo": 10,
         "days": [
             "Wednesday",
@@ -152,7 +152,7 @@
     },
     {
         "name": "8914 Kihn Village",
-        "abbreviation": "AUD",
+        "capacity": 15,
         "roomNo": 30,
         "days": [
             "Sunday",
@@ -161,7 +161,7 @@
     },
     {
         "name": "635 Madaline Way",
-        "abbreviation": "PLN",
+        "capacity": 16,
         "roomNo": 10,
         "days": [
             "Monday",
@@ -170,7 +170,7 @@
     },
     {
         "name": "94321 Winnifred Flats",
-        "abbreviation": "ZAR",
+        "capacity": 17,
         "roomNo": 6,
         "days": [
             "Friday",
@@ -184,7 +184,7 @@
     },
     {
         "name": "80435 Opal Flat",
-        "abbreviation": "EUR",
+        "capacity": 18,
         "roomNo": 8,
         "days": [
             "Friday",
@@ -196,7 +196,7 @@
     },
     {
         "name": "2814 Kuhlman Camp",
-        "abbreviation": "KES",
+        "capacity": 19,
         "roomNo": 5,
         "days": [
             "Wednesday"
@@ -204,7 +204,7 @@
     },
     {
         "name": "5735 Schmidt Vista",
-        "abbreviation": "AFN",
+        "capacity": 20,
         "roomNo": 29,
         "days": [
             "Thursday",
@@ -214,7 +214,7 @@
     },
     {
         "name": "1201 Schinner Isle",
-        "abbreviation": "COP",
+        "capacity": 13,
         "roomNo": 11,
         "days": [
             "Tuesday",
@@ -226,7 +226,7 @@
     },
     {
         "name": "52708 Olson Gateway",
-        "abbreviation": "MWK",
+        "capacity": 12,
         "roomNo": 10,
         "days": [
             "Monday",
@@ -240,7 +240,7 @@
     },
     {
         "name": "1404 Wisoky Rapid",
-        "abbreviation": "EUR",
+        "capacity": 15,
         "roomNo": 12,
         "days": [
             "Friday",
@@ -250,7 +250,7 @@
     },
     {
         "name": "11226 Welch Crossing",
-        "abbreviation": "BIF",
+        "capacity": 16,
         "roomNo": 22,
         "days": [
             "Sunday"
