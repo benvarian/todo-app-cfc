@@ -4,12 +4,7 @@
         "capacity": 14,
         "roomNo": 12,
         "days": [
-            "Friday",
-            "Friday",
-            "Tuesday",
-            "Wednesday",
-            "Sunday",
-            "Friday"
+            "Tuesday W1"
         ]
     },
     {
@@ -17,11 +12,7 @@
         "capacity": 1,
         "roomNo": 10,
         "days": [
-            "Wednesday",
-            "Tuesday",
-            "Tuesday",
-            "Sunday",
-            "Tuesday"
+            "Tuesday W2"
         ]
     },
     {
@@ -29,8 +20,7 @@
         "capacity": 2,
         "roomNo": 5,
         "days": [
-            "Thursday",
-            "Monday"
+            "Wednesday W1"
         ]
     },
     {
@@ -38,7 +28,7 @@
         "capacity": 3,
         "roomNo": 20,
         "days": [
-            "Tuesday"
+            "Wednesday W2"
         ]
     },
     {
@@ -46,9 +36,7 @@
         "capacity": 4,
         "roomNo": 3,
         "days": [
-            "Friday",
-            "Wednesday",
-            "Sunday"
+            "Any"
         ]
     },
     {
@@ -56,9 +44,8 @@
         "capacity": 5,
         "roomNo": 28,
         "days": [
-            "Thursday",
-            "Wednesday",
-            "Thursday"
+            "Tuesday W2",
+            "Tuesday W1"
         ]
     },
     {
@@ -66,12 +53,8 @@
         "capacity": 6,
         "roomNo": 16,
         "days": [
-            "Thursday",
-            "Wednesday",
-            "Monday",
-            "Thursday",
-            "Monday",
-            "Wednesday"
+            "Tuesday W1",
+            "Tuesday W2"
         ]
     },
     {
@@ -79,7 +62,8 @@
         "capacity": 7,
         "roomNo": 29,
         "days": [
-            "Thursday"
+            "Wednesday W2",
+            "Wednesday W1"
         ]
     },
     {
@@ -87,7 +71,8 @@
         "capacity": 8,
         "roomNo": 24,
         "days": [
-            "Saturday"
+            "Wednesday W1",
+            "Wednesday W2"
         ]
     },
     {
@@ -95,21 +80,23 @@
         "capacity": 9,
         "roomNo": 12,
         "days": [
-            "Monday"
+            "Any"
         ]
     },
     {
         "name": "509 Cummerata Islands",
         "capacity": 10,
         "roomNo": 19,
-        "days": []
+        "days": [
+            "Any"
+        ]
     },
     {
         "name": "115 Amir Route",
         "capacity": 11,
         "roomNo": 12,
         "days": [
-            "Sunday"
+            "Any"
         ]
     },
     {
@@ -117,10 +104,7 @@
         "capacity": 12,
         "roomNo": 20,
         "days": [
-            "Monday",
-            "Tuesday",
-            "Tuesday",
-            "Friday"
+            "Any"
         ]
     },
     {
@@ -128,12 +112,9 @@
         "capacity": 13,
         "roomNo": 30,
         "days": [
-            "Thursday",
-            "Thursday",
-            "Monday",
-            "Sunday",
-            "Saturday",
-            "Friday"
+            "Tuesday W1",
+            "Tuesday W2",
+            "Wednesday W1"
         ]
     },
     {
@@ -141,13 +122,9 @@
         "capacity": 14,
         "roomNo": 10,
         "days": [
-            "Wednesday",
-            "Tuesday",
-            "Monday",
-            "Saturday",
-            "Friday",
-            "Thursday",
-            "Friday"
+            "Tuesday W1",
+            "Tuesday W2",
+            "Wednesday W1"
         ]
     },
     {
@@ -155,8 +132,9 @@
         "capacity": 15,
         "roomNo": 30,
         "days": [
-            "Sunday",
-            "Friday"
+            "Tuesday W2",
+            "Wednesday W1",
+            "Wednesday W2"
         ]
     },
     {
@@ -164,8 +142,9 @@
         "capacity": 16,
         "roomNo": 10,
         "days": [
-            "Monday",
-            "Tuesday"
+            "Tuesday W2",
+            "Wednesday W1",
+            "Wednesday W2"
         ]
     },
     {
@@ -173,13 +152,8 @@
         "capacity": 17,
         "roomNo": 6,
         "days": [
-            "Friday",
-            "Wednesday",
-            "Wednesday",
-            "Monday",
-            "Sunday",
-            "Tuesday",
-            "Wednesday"
+            "Tuesday W1",
+            "Wednesday W1"
         ]
     },
     {
@@ -187,11 +161,8 @@
         "capacity": 18,
         "roomNo": 8,
         "days": [
-            "Friday",
-            "Tuesday",
-            "Wednesday",
-            "Friday",
-            "Monday"
+            "Tuesday W1",
+            "Wednesday W1"
         ]
     },
     {
@@ -199,7 +170,8 @@
         "capacity": 19,
         "roomNo": 5,
         "days": [
-            "Wednesday"
+            "Tuesday W1",
+            "Wednesday W1"
         ]
     },
     {
@@ -207,9 +179,8 @@
         "capacity": 20,
         "roomNo": 29,
         "days": [
-            "Thursday",
-            "Tuesday",
-            "Monday"
+            "Tuesday W1",
+            "Wednesday W1"
         ]
     },
     {
@@ -217,11 +188,8 @@
         "capacity": 13,
         "roomNo": 11,
         "days": [
-            "Tuesday",
-            "Tuesday",
-            "Tuesday",
-            "Thursday",
-            "Thursday"
+            "Tuesday W2",
+            "Wednesday W2"
         ]
     },
     {
@@ -229,13 +197,8 @@
         "capacity": 12,
         "roomNo": 10,
         "days": [
-            "Monday",
-            "Saturday",
-            "Thursday",
-            "Wednesday",
-            "Saturday",
-            "Monday",
-            "Friday"
+            "Tuesday W2",
+            "Wednesday W2"
         ]
     },
     {
@@ -243,9 +206,8 @@
         "capacity": 15,
         "roomNo": 12,
         "days": [
-            "Friday",
-            "Tuesday",
-            "Wednesday"
+            "Tuesday W2",
+            "Wednesday W2"
         ]
     },
     {
@@ -253,7 +215,8 @@
         "capacity": 16,
         "roomNo": 22,
         "days": [
-            "Sunday"
+            "Tuesday W2",
+            "Wednesday W2"
         ]
     }
 ]
