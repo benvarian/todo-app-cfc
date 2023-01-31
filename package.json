@@ -6,7 +6,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "firebase": "firebase emulators:start --export-on-exit=data",
+    "firebase": "firebase emulators:start --import=data",
     "dev:emu": "npm run firebase & (sleep 10 && npm run dev)"
   },
   "dependencies": {
