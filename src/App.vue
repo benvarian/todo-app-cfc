@@ -108,20 +108,20 @@ if (window.location.hostname === 'localhost') {
 
 y.forEach(element => {
   // console.log(element.id);
-  const ref = doc(db, "institutions", element.id);
-  setDoc(ref, element)
+  const ref = collection(db, "institutions");
+  addDoc(ref, element)
 });
 
 z.forEach(element => {
   // const ref = doc(db, "teams", element.id)
   // const ref = collection(db, "teams")
-  const ref = doc(db, "teams", element.id)
+  const ref = collection(db, "teams")
   // addDoc(ref, element)
-  setDoc(ref, element)
+  addDoc(ref, element)
 })
 c.forEach(element => {
-  const ref = doc(db, "venues", element.id)
-  setDoc(ref, element)
+  const ref = collection(db, "venues")
+  addDoc(ref, element)
 })
 v.forEach(element => {
   // let el = Object.keys(element).filter(x => x !== 'levels')
@@ -186,14 +186,14 @@ v.forEach(element => {
 const dump = () => {
   x.forEach(element => {
     console.log(element)
-    createUserWithEmailAndPassword(auth, element.email, element.password)
+    createUserWithEmailAndPassword(auth, element.email, "123456")
       .then((userCredential) => {
         // Signed in 
         const user = userCredential.user;
         // console.log(AuthErrorCodes.)
         const usersRef = doc(db, 'users', user.uid)
         // console.log(usersRef)
-        const data = { role: element.role, first_name: element.first_name, last_name: element.last_name, email: element.email, phone: element.phone, password: element.password, institution: element.institution, id: element.id, requesting: element.requesting }
+        const data = { role: element.role, firstName: element.firstName, lastName: element.lastName, email: element.email, phoneNumber: element.phoneNumber, institution: element.institution, requesting: element.requesting }
         // console.log(data)
         setTimeout(() => {
           setDoc(usersRef, data).then(() => {
